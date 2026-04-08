@@ -28,3 +28,7 @@ output = task_manager.execute_command("ls /nonexistentdirectory")
 # parse for errors or warnings 
 errors = task_manager.parse_logs
 print(f"\n Errors Found : {errors}")
+
+
+
+# in simple words this script is going to find certin errors|warnings after running xyz commands
