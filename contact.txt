@@ -1,0 +1,6 @@
+# create the contacts.txt file with sample phone numbers
+with open('contacts.txt', 'w') as file:
+    file.write("ali: 123-456-7890\n")
+    file.write("Mujab: 987-654-3210\n")
+    file.write("Ahmed: 555-123-4567\n")
+    file.write("Sara: 444-789-0123\n")

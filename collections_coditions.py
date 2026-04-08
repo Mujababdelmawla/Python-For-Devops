@@ -7,7 +7,7 @@ server_status = {
     "server1": "online",
     "server2": "offline",
     "server3": "online",
-    "server4": "....."
+    "server4": "unreachable"
 
 }
 
@@ -20,5 +20,5 @@ for server in servers:
     elif status == "offline":
         print(f"{server} is offline .")
     else:
-        print(f"{server} status unknown")
+        print(f"{server} status unreachable")
 
