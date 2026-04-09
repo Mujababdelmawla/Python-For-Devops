@@ -14,7 +14,7 @@ class Server:
         return f"the {self.name}server with {self.ip_address} ip address is {self.status}"
 
     def get_status(self):
-        
+        self.status = "up"
         return f"the {self.name}server with {self.ip_address} ip address current status is {self.status}"
 
 
@@ -23,7 +23,7 @@ server1 = Server("BackEnd", "192.168.3.2", "up")
 
 print(server1.start())
 print(server1.stop())
-
+print(server1.get_status())
 
 
 class WebServer(Server):
@@ -55,3 +55,28 @@ class DatabaseServer(Server):
 server3 = DatabaseServer("DBServer", "192.168.4.6", "up", "MYSQL")
 
 print(server3.start())
+
+
+
+# log file to save instead of printing it to the terminal 
+
+def log_status(Server):
+    with open ('server_log.txt', 'a') as file:
+        file.write(f"server :{Server.name}\n ip address :{Server.ip_address}\n status :{Server.status}\n")
+          
+    print(f"logged {Server.name} status successfully")
+
+
+
+log_status(server1)
+
+log_status(server2)
+
+log_status(server3)
+
+
+
+servers = [ server1, server2, server3]
+for server in servers:
+    print(server.start())
+    log_status(server)

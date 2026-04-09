@@ -1,0 +1,72 @@
+server :BackEnd
+ ip address :192.168.3.2
+ status :offline
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :online
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :offline
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :online
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :offline
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :online
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :up
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
+server :BackEnd
+ ip address :192.168.3.2
+ status :online
+server :FrontEnd
+ ip address :192.168.3.4
+ status :online
+server :DBServer
+ ip address :192.168.4.6
+ status :online
