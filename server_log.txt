@@ -1,72 +1,13 @@
-server :BackEnd
- ip address :192.168.3.2
- status :offline
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :online
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :offline
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :online
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :offline
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :online
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :up
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
-server :BackEnd
- ip address :192.168.3.2
- status :online
-server :FrontEnd
- ip address :192.168.3.4
- status :online
-server :DBServer
- ip address :192.168.4.6
- status :online
+server:FrontEnd | ip_address:192.168.0.1 | status:OFFLINE
+server:FrontEnd | ip_address:192.168.0.1 | status:OFFLINE
+server:BackEnd | ip_address:192.168.0.2 | status:ONLINE
+server:database | ip_address:192.168.0.3 | status:ONLINE
+server:FrontEnd | ip_address:192.168.0.1 | status:OFFLINE
+server:BackEnd | ip_address:192.168.0.2 | status:ONLINE
+server:database | ip_address:192.168.0.3 | status:ONLINE
+server:FrontEnd | ip_address:192.168.0.1 | status:OFFLINE
+server:BackEnd | ip_address:192.168.0.2 | status:ONLINE
+server:database | ip_address:192.168.0.3 | status:ONLINE
+server:FrontEnd | ip_address:192.168.0.1 | status:ONLINE
+server:BackEnd | ip_address:192.168.0.2 | status:ONLINE
+server:database | ip_address:192.168.0.3 | status:ONLINE
