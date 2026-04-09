@@ -17,16 +17,16 @@ class TaskManager:
         errors = []
         for log in self.logs:
             errors.extend(re.findall(error_pattern, log, re.IGNORECASE))
-            return errors
+        return errors  
 
 
 
 
 task_manager = TaskManager()
 # intentionally run a command that fails to generate an error 
-output = task_manager.execute_command("ls /nonexistentdirectory")
+output = task_manager.execute_command("echo 'error: something went wrong'")
 # parse for errors or warnings 
-errors = task_manager.parse_logs
+errors = task_manager.parse_logs()
 print(f"\n Errors Found : {errors}")
 
 

@@ -75,7 +75,7 @@ print(server3.db_type)
 print(server3.start())
 
 
-
+# a fuction that log the servers status in server_log.txt file 
 def log_status(Server):
     with open('server_log.txt', 'a') as file:
         file.write(f"server:{Server.name} | ip_address:{Server.ip_address} | status:{Server.status}\n")
@@ -88,7 +88,7 @@ log_status(server2)
 log_status(server3)
 
 
-
+# for loop to call each server start and log_status
 servers = [server1, server2, server3]
 for server in servers:
     print(server.start())
