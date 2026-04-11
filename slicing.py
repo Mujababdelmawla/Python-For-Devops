@@ -2,6 +2,6 @@
 # syntax : 
 # string[start:end]
 
-string = "Hello, World"
-substring = string[0:6]
+string = "Hello,World"
+substring = string[0:5]
 print(substring)
