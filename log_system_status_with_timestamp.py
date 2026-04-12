@@ -9,6 +9,6 @@ status_message = f"System Checked {formatted_time} , Everything Is Working Smoot
 
 # write the status message to a log file 
 log_file = "./system_status.log"
-with open('log_file', 'a') as file:  # 'a' append the result every time we run the script 
+with open(log_file, 'a') as file:  # 'a' append the result every time we run the script 
     file.write(status_message + "\n")
 print(f"log has been saved in {log_file}")
