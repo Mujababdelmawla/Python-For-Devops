@@ -12,7 +12,7 @@ from datetime import datetime
 def scrape_website():
     url = 'https://bbc.com'
     response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html parser')
+    soup = BeautifulSoup(response.text, 'html.parser')
 
     data = []
     for article in soup.find_all('a', {'class': 'promo-link'}):
@@ -28,7 +28,7 @@ def scrape_website():
 
 def backup_logs():
     logs_dir = './logs'
-    backup_dir = f'path/to/backups/backup {datetime.now().strftime(%Y-%m-%d %H:%M:%S)}'
+    backup_dir = f'path/to/backups/backup {datetime.now().strftime(%Y-%m-%d_%H-%M-%S)}'
     shutil.make_archive(backup_dir, 'zip', logs_dir)
 
 
@@ -48,26 +48,20 @@ def send_email(subject, body):
     msg['To'] = 'admin@example.com'
 
     with smtplib.SMTP('smtp.example.com') as server:
-    server.login('your_email@example.com', 'your_password')
-    server.sendmail(msg['From'], [msg['To']], msg.as_string())
+        server.login('your_email@example.com', 'your_password')
+        server.sendmail(msg['From'], [msg['To']], msg.as_string())
 
 # main Devops pipeline function
 
-def devops_pipeline(): # step1: scrape the website scrape_website()
+def devops_pipeline():
+    # step 1: scrape the website
+    scrape_website()
+    # step 2: backup logs
+    backup_logs()   
+    # step 3: parse logs for errors
+    error_logs = parse_logs()
+    # step 4: send email if errors found
+    if error_logs:
+        send_email('Critical Error Alert', '\n'.join(error_logs))
 
-# step2: backup logs 
-backup_logs
-
-# step3: parse logs for errors 
-error_logs = parse_logs()
- 
-# step4: send an email alert if errors found
-
-if error_logs:
-    send_email('critical error alert', '\n'.join(error_logs))
-
-
-# run the full pipeline 
-
-devops_pipeline()  # run the full script and if errors found it is gonna run the def devops_pipeline functions
-
+devops_pipeline()
