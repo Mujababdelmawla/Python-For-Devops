@@ -24,7 +24,7 @@ class TaskManager:
 
 task_manager = TaskManager()
 # intentionally run a command that fails to generate an error 
-output = task_manager.execute_command("echo 'error: something went wrong'")
+output = task_manager.execute_command("echo 'error: something went wrong we try to fix the error and also the warning should be notified'")
 # parse for errors or warnings 
 errors = task_manager.parse_logs()
 print(f"\n Errors Found : {errors}")
