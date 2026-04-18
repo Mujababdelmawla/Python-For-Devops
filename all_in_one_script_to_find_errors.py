@@ -8,7 +8,7 @@ class TaskManager:
         result = subprocess.run(command, capture_output=True , text=True , shell=True)
         # log both stdout and stderr (for error detection)
         self.logs.append(result.stdout + result.stderr)
-        print(f"\n--- command output ---\n){result.stdout}{result.stderr}")
+        print(f"\n--- command output ---\n{result.stdout}{result.stderr}")
         return result.stdout + result.stderr 
 
     def parse_logs(self):

@@ -9,8 +9,8 @@ def send_email(subject, body):
     msg['To'] = 'admin@example.com'
 
     with smtplib.SMTP('smtp.example.com') as server:
-    server.login('your_email@example.com', 'your_password')
-    server.sendmail(msg['From'], [msg['To']], msg.as_string())
+        server.login('your_email@example.com', 'your_password')
+        server.sendmail(msg['From'], [msg['To']], msg.as_string())
     
 # Read logs and parse for errors
 with open('system.log', 'r') as file:
@@ -18,7 +18,7 @@ with open('system.log', 'r') as file:
 
 # find critical errors
 
-critical_errors = [log for log in logs if re.serach(r'ERROR', log)]
+critical_errors = [log for log in logs if re.search(r'ERROR', log)] 
 
 if critical_errors:
     send_email('critical error alert', '\n'.join(critical_errors))
